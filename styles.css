@@ -68,9 +68,14 @@ nav a:hover { color: var(--rose-deep); text-decoration: underline; text-underlin
 
 /* story */
 .story { padding: clamp(56px, 8vw, 104px) 0; }
-.story .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(24px, 6vw, 80px); align-items: start; }
-.story p { max-width: 52ch; }
-.story p + p { margin-top: 1em; }
+.story { background: var(--berry); color: var(--petal); }
+.story h2 { color: var(--pink); font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 600; font-style: italic; }
+.story .statement { font: 800 clamp(2rem, 5.6vw, 4.5rem)/1.08 var(--display); font-variation-settings: "SOFT" 100, "opsz" 144; letter-spacing: -0.02em; max-width: 20ch; margin: clamp(20px, 3vw, 36px) 0 clamp(40px, 6vw, 72px); }
+.story-foot { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(24px, 6vw, 80px); align-items: start; }
+.story-foot > p { max-width: 40ch; font-size: 1.25rem; line-height: 1.55; }
+.story .charity { background: var(--pink); color: var(--berry); border-radius: 28px; padding: 28px; }
+.story .charity a { color: var(--berry); }
+.story .charity h3 { color: var(--rose-deep); }
 .charity { background: var(--berry); color: var(--petal); border-radius: 28px; padding: clamp(28px, 4vw, 48px); }
 .charity h3 { font-size: 1.75rem; margin-bottom: 12px; color: var(--pink); }
 .charity a { color: #fff; text-underline-offset: 4px; }
@@ -79,7 +84,7 @@ footer { padding: 32px 0 48px; font-size: .9rem; }
 footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; }
 
 @media (max-width: 760px) {
-  .hero .wrap, .story .wrap { grid-template-columns: 1fr; }
+  .hero .wrap, .story-foot { grid-template-columns: 1fr; }
   .hero-cap { max-width: 420px; }
   .grid { grid-template-columns: 1fr; }
   nav a { margin-left: 16px; }
