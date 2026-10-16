@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Claire vs Boobie Cancer</title>
+<meta name="description" content="Baseball caps with something to say. Profits go to the Breast Cancer Research Foundation. UK delivery.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,400..900,100&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Reusable cap shape. --cap = fabric colour, --seam = darker seam colour. -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="cap" viewBox="0 0 400 300">
+    <path d="M52 214C130 194 270 194 348 214C338 262 262 288 200 288C138 288 62 262 52 214Z" fill="var(--seam)"/>
+    <path d="M70 214C70 96 130 40 200 40C270 40 330 96 330 214C270 200 130 200 70 214Z" fill="var(--cap)"/>
+    <path d="M200 40C182 100 182 160 188 204M200 40C218 100 218 160 212 204" fill="none" stroke="var(--seam)" stroke-width="2" stroke-linecap="round" opacity=".55"/>
+    <circle cx="200" cy="40" r="9" fill="var(--seam)"/>
+  </symbol>
+</svg>
+
+<header>
+  <div class="wrap">
+    <a class="wordmark" href="#top">Claire <i>vs</i> Boobie Cancer</a>
+    <nav><a href="#shop">Shop</a><a href="#story">Claire's story</a></nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <h1>Claire <span class="vs">vs</span> boobie cancer</h1>
+        <p>Baseball caps with something to say. Profits go to the Breast Cancer Research Foundation.</p>
+        <a class="btn" href="#shop">Shop the caps</a>
+      </div>
+      <svg class="hero-cap" viewBox="0 0 400 300" role="img" aria-label="Pink baseball cap embroidered with the word boobies" style="--cap:#f2a7bb;--seam:#d6366b">
+        <use href="#cap" width="400" height="300"/>
+        <text x="200" y="158" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-size="56" font-weight="800" fill="#fff5f6" stroke="#a8204f" stroke-width="1.4" stroke-dasharray="3 3" paint-order="stroke" style="font-variation-settings:'SOFT' 100">Boobies</text>
+      </svg>
+    </div>
+  </section>
+
+  <section class="shop" id="shop">
+    <div class="wrap">
+      <h2>Two caps</h2>
+      <p class="lede">Adjustable strap, one size. Delivered across the UK.</p>
+      <div class="grid">
+        <article class="product">
+          <a class="pic" href="boobies.html">
+            <svg viewBox="0 0 400 300" role="img" aria-label="Rose pink cap with the word boobies" style="--cap:#d6366b;--seam:#a8204f">
+              <use href="#cap" width="400" height="300"/>
+              <text x="200" y="158" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-size="56" font-weight="800" fill="#fff5f6" style="font-variation-settings:'SOFT' 100">Boobies</text>
+            </svg>
+          </a>
+          <h3><a href="boobies.html">The Boobies Cap</a></h3>
+          <p class="meta">Rose pink, cream embroidery.</p>
+          <div class="row">
+            <span class="price">£10</span>
+            <!-- Replace # with your Stripe Payment Link for this cap -->
+            <a class="btn" href="#" data-stripe="boobies">Buy now</a>
+          </div>
+        </article>
+        <article class="product">
+          <a class="pic" href="fck-cancer.html">
+            <svg viewBox="0 0 400 300" role="img" aria-label="Deep berry cap with the words F*ck cancer" style="--cap:#3d1226;--seam:#220a15">
+              <use href="#cap" width="400" height="300"/>
+              <text x="200" y="156" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-size="40" font-weight="800" fill="#f2a7bb" style="font-variation-settings:'SOFT' 100">F*ck cancer</text>
+            </svg>
+          </a>
+          <h3><a href="fck-cancer.html">The F*ck Cancer Cap</a></h3>
+          <p class="meta">Deep berry, pink embroidery.</p>
+          <div class="row">
+            <span class="price">£10</span>
+            <!-- Replace # with your Stripe Payment Link for this cap -->
+            <a class="btn" href="#" data-stripe="fck-cancer">Buy now</a>
+          </div>
+        </article>
+      </div>
+      <p class="note">Secure card payment with Stripe. UK delivery only.</p>
+    </div>
+  </section>
+
+  <section class="story" id="story">
+    <div class="wrap">
+      <div>
+        <h2>Claire is in recovery</h2>
+        <!-- Claire: replace with your own words. -->
+        <p>Claire is recovering from breast cancer. These caps are how she says what she thinks of it.</p>
+        <p>Every profit from every cap goes to charity, so wearing one helps someone else's fight too.</p>
+      </div>
+      <aside class="charity">
+        <h3>Where the money goes</h3>
+        <p>All profits go to the <a href="https://www.bcrf.org" rel="noopener">Breast Cancer Research Foundation</a>, which funds research into prevention, treatment and cure.</p>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Claire vs boobie cancer</span>
+    <span>Profits go to the Breast Cancer Research Foundation.</span>
+  </div>
+</footer>
+
+</body>
+</html>
