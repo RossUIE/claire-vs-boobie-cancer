@@ -133,8 +133,17 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
 .pdp h1 { font-size: clamp(2.5rem, 5.5vw, 4.25rem); }
 .pdp .price { display: block; margin: 16px 0 20px; font-size: 2.25rem; }
 .pdp .lead { font-size: 1.2rem; line-height: 1.5; max-width: 38ch; }
-.pdp .buy { margin: 28px 0 8px; }
-.pdp .buy .btn { width: 100%; text-align: center; padding: 18px 32px; font-size: 1.1rem; }
+.fulfilment { margin-top: 32px; }
+.fulfilment fieldset { border: 0; margin: 0; padding: 0; }
+.fulfilment legend { font-family: var(--display); font-size: 1.3rem; font-weight: 700; margin-bottom: 14px; }
+.fulfilment-option { align-items: flex-start; border: 1px solid rgba(61,18,38,.2); border-radius: 14px; cursor: pointer; display: flex; gap: 13px; padding: 16px; }
+.fulfilment-option + .fulfilment-option { margin-top: 10px; }
+.fulfilment-option:has(input:checked) { background: var(--petal); border-color: var(--rose); box-shadow: inset 0 0 0 1px var(--rose); }
+.fulfilment-option input { accent-color: var(--rose); margin: 5px 0 0; width: 18px; height: 18px; }
+.fulfilment-option strong, .fulfilment-option small { display: block; }
+.fulfilment-option small { font-size: .9rem; line-height: 1.4; margin-top: 2px; opacity: .8; }
+.checkout-button { margin-top: 16px; width: 100%; text-align: center; padding: 18px 32px; font-size: 1.1rem; }
+.fulfilment-note { margin-top: 8px; }
 .pdp .small { font-size: .9rem; opacity: .85; }
 .specs { margin: 32px 0 0; padding: 0; list-style: none; border-top: 2px solid var(--pink); }
 .specs li { display: flex; justify-content: space-between; gap: 16px; padding: 12px 0; border-bottom: 1px solid rgba(61,18,38,.15); }

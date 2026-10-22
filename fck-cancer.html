@@ -35,11 +35,21 @@
         <h1>The F**k Cancer Cap</h1>
         <span class="price">£10</span>
         <p class="lead">A pink baseball cap with “F**k cancer” stitched across the front. Says it for you.</p>
-        <div class="buy">
-          <!-- Replace # with your Stripe Payment Link for this cap -->
-          <a class="btn" href="https://buy.stripe.com/test_eVq3cn0TR2oV6u31PLao802" data-stripe="fck-cancer">Buy now</a>
-        </div>
-        <p class="small">Secure card payment with Stripe. UK delivery only.</p>
+        <form class="fulfilment" data-product="fck-cancer">
+          <fieldset>
+            <legend>How would you like your cap?</legend>
+            <label class="fulfilment-option">
+              <input type="radio" name="fck-cancer-fulfilment" value="postage" checked data-checkout-url="https://buy.stripe.com/5kQ00ieT07Kd7kNd4a7ok03">
+              <span><strong>Postage</strong><small>UK delivery. Postage is added at Stripe checkout.</small></span>
+            </label>
+            <label class="fulfilment-option">
+              <input type="radio" name="fck-cancer-fulfilment" value="collection" data-checkout-url="https://buy.stripe.com/cNi8wOaCK0hL9sV3tA7ok02">
+              <span><strong>Click & collect</strong><small>Free. Claire will email to arrange collection.</small></span>
+            </label>
+          </fieldset>
+          <a class="btn checkout-button" href="https://buy.stripe.com/5kQ00ieT07Kd7kNd4a7ok03" data-stripe="fck-cancer">Continue with postage</a>
+          <p class="small fulfilment-note" aria-live="polite">Secure card payment with Stripe. Your delivery address is collected at checkout.</p>
+        </form>
         <ul class="specs">
           <li><span>Colour</span><span>Pink</span></li>
           <li><span>Embroidery</span><span>Pink</span></li>
@@ -63,5 +73,17 @@
     <span>Profits go to Breast Cancer Now.</span>
   </div>
 </footer>
+<script>
+document.querySelectorAll('.fulfilment').forEach((form) => {
+  const button = form.querySelector('.checkout-button');
+  const note = form.querySelector('.fulfilment-note');
+  form.querySelectorAll('input[type="radio"]').forEach((option) => option.addEventListener('change', () => {
+    const collecting = option.value === 'collection';
+    button.href = option.dataset.checkoutUrl;
+    button.textContent = collecting ? 'Continue with click & collect' : 'Continue with postage';
+    note.textContent = collecting ? 'Secure card payment with Stripe. Claire will email you to arrange collection.' : 'Secure card payment with Stripe. Your delivery address is collected at checkout.';
+  }));
+});
+</script>
 </body>
 </html>
