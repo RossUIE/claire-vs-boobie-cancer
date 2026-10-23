@@ -78,32 +78,28 @@ nav a:hover { color: var(--rose-deep); text-decoration: underline; text-underlin
 .note { margin-top: 32px; font-size: .95rem; opacity: .85; }
 
 /* story */
-.story { padding: clamp(56px, 8vw, 104px) 0; }
-.story { background: var(--berry); color: var(--petal); }
-.story h2 { color: var(--pink); font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 600; font-style: italic; }
-.story .statement { font: 800 clamp(2rem, 5.6vw, 4.5rem)/1.08 var(--display); font-variation-settings: "SOFT" 100, "opsz" 144; letter-spacing: -0.02em; max-width: 20ch; margin: clamp(20px, 3vw, 36px) 0 clamp(40px, 6vw, 72px); }
-.story-intro { display: grid; grid-template-columns: minmax(220px, .72fr) minmax(0, 1fr); gap: clamp(28px, 6vw, 96px); align-items: center; margin-bottom: clamp(64px, 10vw, 132px); }
+.story { background: var(--berry); color: var(--petal); padding: clamp(64px, 10vw, 136px) 0; }
+.story .statement { font: 800 clamp(2.1rem, 6vw, 5rem)/1.06 var(--display); font-variation-settings: "SOFT" 100, "opsz" 144; letter-spacing: -0.02em; max-width: 18ch; text-wrap: balance; margin-bottom: clamp(56px, 9vw, 120px); }
+.chapter { display: grid; gap: clamp(28px, 6vw, 96px); align-items: start; }
+.chapter-treatment { grid-template-columns: minmax(0, .9fr) minmax(0, 1fr); margin-bottom: clamp(72px, 11vw, 150px); }
+.chapter-caps { grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); margin-bottom: clamp(72px, 11vw, 150px); }
+.chapter-caps .caps-copy { grid-column: 1; grid-row: 1; }
+.chapter-caps .story-photo { grid-column: 2; grid-row: 1; }
 .story-photo { margin: 0; }
-.story-photo img { display: block; width: 100%; height: 100%; object-fit: cover; }
-.story-photo-treatment { max-width: 340px; }
-.story-photo-treatment img { aspect-ratio: 3 / 4; object-position: 55% 50%; }
-.story-photo p { font-size: .9rem; font-style: italic; margin: 14px 0 0; opacity: .78; }
-.story-copy { font-size: clamp(1.15rem, 1.75vw, 1.42rem); line-height: 1.55; max-width: 44ch; }
+.story-photo img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 28px; }
+.story-photo figcaption { font-size: 1rem; font-style: italic; margin-top: 14px; max-width: 32ch; }
+.story-copy { font-size: clamp(1.2rem, 1.9vw, 1.5rem); line-height: 1.55; max-width: 40ch; padding-top: clamp(0px, 4vw, 56px); }
 .story-copy p + p { margin-top: 1.15em; }
-.story-copy a { color: var(--pink); text-decoration-thickness: 1px; text-underline-offset: 4px; }
-.caps-meaning { border-top: 1px solid rgba(255,255,255,.25); border-bottom: 1px solid rgba(255,255,255,.25); display: grid; grid-template-columns: .85fr 1.15fr; gap: clamp(36px, 8vw, 140px); align-items: center; padding: clamp(34px, 5vw, 68px) 0; margin-bottom: clamp(52px, 7vw, 92px); }
-.story-photo-bell { height: clamp(290px, 33vw, 470px); overflow: hidden; }
-.story-photo-bell img { object-position: 50% 45%; }
-.overline { color: var(--pink); font-size: .78rem; font-weight: 600; letter-spacing: .11em; text-transform: uppercase; margin: 0 0 14px; }
-.caps-meaning h3 { color: var(--pink); font-size: clamp(2rem, 4vw, 3.7rem); margin: 0 0 24px; }
-.caps-meaning h3 em { font-style: italic; font-weight: 500; }
-.caps-meaning > div:last-child > p:last-child { font-size: 1.13rem; line-height: 1.55; max-width: 41ch; }
-.story-foot { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(24px, 6vw, 80px); align-items: start; }
-.story-foot > p { max-width: 40ch; font-size: 1.25rem; line-height: 1.55; }
-.story .charity { background: var(--pink); color: var(--berry); border-radius: 28px; padding: 28px; }
-.story .charity a { color: var(--berry); }
-.story .charity h3 { color: var(--rose-deep); }
-.story .charity .overline { color: var(--rose-deep); }
+.story-copy a, .charity-link { color: var(--pink); text-underline-offset: 4px; }
+.caps-copy h3 { color: var(--pink); font-size: clamp(2.2rem, 4.6vw, 4.2rem); margin-bottom: 28px; text-wrap: balance; }
+.caps-copy h3 em { font-style: italic; font-weight: 500; }
+.caps-copy > p { font-size: 1.15rem; line-height: 1.6; max-width: 42ch; }
+.caps-pic { display: block; background: var(--pink); border-radius: 28px; padding: 20px 16px 8px; margin: 36px 0 24px; max-width: 460px; }
+.caps-pic img { display: block; width: 100%; height: auto; mix-blend-mode: multiply; }
+.story-close { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(24px, 6vw, 96px); border-top: 1px solid rgba(255,255,255,.25); padding-top: clamp(32px, 5vw, 56px); }
+.story-close > p { font-size: 1.25rem; line-height: 1.55; max-width: 36ch; }
+.story-close h3 { color: var(--pink); font-size: clamp(1.5rem, 2.6vw, 2rem); margin-bottom: 12px; }
+.story-close div p { max-width: 46ch; line-height: 1.55; }
 .charity-link { display: inline-flex; gap: 10px; margin-top: 22px; text-underline-offset: 4px; }
 .charity { background: var(--berry); color: var(--petal); border-radius: 28px; padding: clamp(28px, 4vw, 48px); }
 .charity h3 { font-size: 1.75rem; margin-bottom: 12px; color: var(--pink); }
@@ -114,11 +110,11 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
 
 @media (max-width: 760px) {
   .hero-offer { gap: 40px; }
-  .hero-offer, .story-foot, .story-intro, .caps-meaning { grid-template-columns: 1fr; }
+  .hero-offer, .chapter, .story-close { grid-template-columns: 1fr; }
+  .chapter-caps .caps-copy, .chapter-caps .story-photo { grid-column: 1; grid-row: auto; }
+  .story-photo { max-width: 420px; }
   .grid { grid-template-columns: 1fr; }
   nav a { margin-left: 16px; }
-  .story-photo-treatment { max-width: none; width: min(100%, 380px); }
-  .story-photo-treatment img { aspect-ratio: 4 / 5; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
@@ -168,7 +164,8 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
 .gallery .zoom figcaption { position: relative; padding: 12px 20px; font-size: .9rem; background: var(--bg); }
 
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
-.foot-nav a { margin-right: 16px; }
+.foot-nav { flex-wrap: wrap; gap: 8px 20px; }
+footer .foot-nav a { margin: 0; }
 .pdp .about { margin: 24px 0; max-width: 48ch; }
 .other-cap { margin: 24px 0; }
 .faq { padding: 48px 0 64px; }
